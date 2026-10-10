@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Zoe Villalaz 💗</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="fondo-corazones" aria-hidden="true"></div>
+
+  <div class="app">
+
+    <!-- ===================== Encabezado y menu ===================== -->
+    <header class="encabezado">
+      <p class="encabezado__eyebrow">Hecho a mano y un poco de ayuda :,v para</p>
+      <h1 class="encabezado__titulo">Tais Villalaz</h1>
+
+      <nav class="menu" aria-label="Secciones del regalo">
+        <button class="menu__boton activo" data-vista="inicio">Inicio</button>
+        <button class="menu__boton" data-vista="musica">Tu Música Favorita</button>
+        <button class="menu__boton" data-vista="momentos">Nuestros Momentos</button>
+        <button class="menu__boton" data-vista="carta">Mi Carta</button>
+      </nav>
+    </header>
+
+    <!-- ===================== Contenido principal ===================== -->
+    <main class="contenido">
+
+      <!-- ---------- SECCIÓN 1: INICIO ---------- -->
+      <section id="inicio" class="vista vista--activa">
+        <div class="tarjeta tarjeta--inicio">
+
+          <img src="spidey.png" alt="Spidey y Gwen" class="spidey-gwen">
+
+          <span class="corazon-grande">💗</span>
+          <h2 class="titulo-cursivo">Hola, mi hermosa</h2>
+          <p class="texto-grande">
+            Hice este Regalo para ti pensando en ti yy por tu cumpleaños
+            <strong>Zoe Villalaz</strong>.
+          </p>
+          <p>
+            Usa el menú de arriba para descubrir cada sorpresa que te preparé:
+            nuestra música, nuestros momentos, y una carta escrita
+            desde el corazón.
+          </p>
+        </div>
+      </section>
+
+      <!-- ---------- SECCIÓN 2: Tu musica favorita---------- -->
+      <section id="musica" class="vista">
+        <div class="tarjeta">
+          <h2 class="titulo-seccion">Tu Música Favorita 🎧</h2>
+          <p>No sé si sean las que te gusten, pero las escogí detallademente para ti.</p>
+
+          <div class="grilla-musica">
+
+            <!-- Tarjeta 1: Young Cister -->
+            <article class="tarjeta-artista">
+              <h3>Young Cister — miau</h3>
+              <iframe 
+                  data-testid="embed-iframe" 
+                  style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/track/5osSgKDiyrzhLjsEABO6c9?utm_source=generator" 
+                  width="100%" 
+                  height="152" 
+                  frameBorder="0" 
+                  allowfullscreen="" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy">
+              </iframe>
+            </article>
+
+            <!-- Tarjeta 2: Los Auténticos Decadentes -->
+            <article class="tarjeta-artista">
+              <h3>Los Auténticos Decadentes — Loco (Tu forma de ser)</h3>
+              <div class="video-envoltorio">
+                  <iframe 
+                      data-testid="embed-iframe" 
+                      style="border-radius:12px" 
+                      src="https://open.spotify.com/embed/track/7tEFQUQHbFQ5PRghXSPScB?utm_source=generator" 
+                      width="100%" 
+                      height="152" 
+                      frameBorder="0" 
+                      allowfullscreen="" 
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                      loading="lazy">
+                  </iframe>
+              </div>
+            </article>
+
+            <!-- Tarjeta 3: La Rondalla De Saltillo -->
+            <article class="tarjeta-artista">
+              <h3>La Rondalla De Saltillo – ¿Hasta Dónde Te Quiero?</h3>
+              <iframe 
+                data-testid="embed-iframe" 
+                style="border-radius:12px" 
+                src="https://open.spotify.com/embed/track/1licjid99qj1BFIYGb3wZC?utm_source=generator" 
+                width="100%" 
+                height="152" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+              </iframe>
+            </article>
+
+          </div> <!-- Cierre grilla-musica -->
+        </div> <!-- Cierre tarjeta -->
+      </section> <!-- Cierre SECCIÓN 2 -->
+
+      <!-- ---------- SECCIÓN 3: Nuestros momentos ---------- -->
+      <section id="momentos" class="vista">
+        <div class="tarjeta">
+          <h2 class="titulo-seccion">Nuestros Momentos 📸</h2>
+          <p>
+            Algunas Fotos que saque por ahi jeje. Aunque me faltan algunas fotos que no pude sacar xq me daba penita 😭
+          </p>
+
+          <div class="galeria">
+            <figure class="polaroid polaroid--izq">
+              <img src="assets/imagenes/momentos/foto1.jpg" alt="Foto de un momento juntos" />
+              <figcaption>Foto de cuando te di las flores 💖</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--der">
+              <img src="assets/imagenes/momentos/foto2.jpg" alt="Foto de un momento juntos" />
+              <figcaption>Foto xq si XD</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--izq">
+              <img src="assets/imagenes/momentos/foto3.jpg" alt="Foto de un momento juntos" />
+              <figcaption>cuando te acompañe a tomar tu carro por primera vez</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--der">
+              <img src="assets/imagenes/momentos/foto4.jpg" alt="Foto de un momento juntos" />
+              <figcaption>Cuando me sorprendí por la caja y me hizo feliz</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--izq">
+              <img src="assets/imagenes/momentos/foto5.jpg" alt="Foto de un momento juntos" />
+              <figcaption>La hermosa, guapa e increíble loca que tengo al lado</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--der">
+              <img src="assets/imagenes/momentos/foto6.jpg" alt="Foto de un momento juntos" />
+              <figcaption>oyara mveo de la mismisíma mierda</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--izq">
+              <img src="assets/imagenes/momentos/foto7.jpg" alt="Foto de un momento juntos" />
+              <figcaption>wuatafak</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--der">
+              <img src="assets/imagenes/momentos/foto8.jpg" alt="Foto de un momento juntos" />
+              <figcaption>olajeje</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--izq">
+              <img src="assets/imagenes/momentos/foto9.jpg" alt="Foto de un momento juntos" />
+              <figcaption>ke hermosa te ves zoe💖</figcaption>
+            </figure>
+
+            <figure class="polaroid polaroid--der">
+              <img src="assets/imagenes/momentos/foto10.jpg" alt="Foto de un momento juntos" />
+              <figcaption>ola micha ke bonita saliste🩷😭</figcaption>
+            </figure>
+          </div> <!-- Cierre galeria -->
+        </div> <!-- Cierre tarjeta -->
+      </section> <!-- Cierre SECCIÓN 3 -->
+
+      <!-- ---------- SECCIÓN 4: Mi carta ---------- -->
+      <section id="carta" class="vista">
+        <div class="tarjeta tarjeta--carta">
+          <span class="sello-cera">💌</span>
+          <h2 class="titulo-cursivo">Para ti, mi pequeña loca 💖</h2>
+
+          <p>Tais, no encuentro una forma más bonita de decirte cuánto te amo y cuánto te extraño que creando algo con mis propias manos y ayudita</p>
+          <p>Este regalo te lo hice por tu cumpleaños, así que capaz te lo mande ese día. Estos días sin verte han sido eternos para mí, y la verdad es que me encantas demasiado, solo quiero decirte que nunca serás dificil de amar ante mis ojos, porqué eres la mejor chica del mundo, la que devolvió el brillo en mis ojos</p>
+          <p>Quiero decirte con todo el corazón que jamás se me pasaría por la cabeza engañarte ni hacerte daño. Si en algún momento llego a hacerte sentir mal, te pido de corazón que me lo digas, porqué, yo se que soy humano y capaz no haga las cosas bien, pero si estoy dispuesto a tratar de ser mejor cada día por ti, porque tú vales completamente la pena.</p>
+          <p>Estoy aprendiendo facetas de mí, que ni yo mismo conocía y queria agradecerte también, por quedarte conmigo, aunque a veces sea complicado y hayan días en que ni tú misma me entiendas, quiero agradecerte por querer a este desastre, Gracias por ser mi motivo para querer mejorar cada día. Te amo❤️, hoy y siempre.</p>
+          <p>Deseo poder estar a tu lado y quedarme contigo hasta donde tú me permitas.</p>
+          <p class="firma">Te amo y te amaré, hoy y siempre, Zoé :3. </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

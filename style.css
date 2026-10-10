@@ -1,0 +1,314 @@
+:root {
+  --rojo-suave: #ff0000;
+  --rojo-medio: #ac0d0d;
+  --rojo-fuerte: #ff4d6d;
+  --vino: #6d1e2b;
+  --crema: #c9c1bf;
+  --naranja: #ca6c0d;
+  --dorado: #ffc891;
+
+  --fuente-titulos: "Playfair Display", serif;
+  --fuente-cursiva: "Dancing Script", cursive;
+  --fuente-texto: "Quicksand", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: #ffffff;
+  background: linear-gradient(135deg, #0d0205 0%, #4a0404 50%, #0b1021 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#fondo-corazones {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.corazon-flotante {
+  position: absolute;
+  bottom: -10%;
+  font-size: 1.4rem;
+  opacity: 0.55;
+  animation: flotar linear infinite;
+}
+
+@keyframes flotar {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 0.6; }
+  100% { transform: translateY(-110vh) rotate(25deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .corazon-flotante { animation: none; display: none; }
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+/* --- ENCABEZADO --- */
+.encabezado {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.encabezado__eyebrow {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.encabezado__titulo, h1, .encabezado h1 {
+  font-family: var(--fuente-cursiva);
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  color: #ff4d6d;
+  text-shadow: 0 0 12px rgba(255, 77, 109, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+/* --- MENÚ --- */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--crema);
+  padding: 0.5rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(122, 59, 70, 0.08);
+  border: 1px solid var(--rojo-medio);
+}
+
+.menu__boton {
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--vino);
+  background: transparent;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+.menu__boton:hover {
+  background: var(--rojo-suave);
+  color: white;
+}
+
+.menu__boton.activo {
+  background: var(--rojo-fuerte);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.menu__boton:focus-visible {
+  outline: 3px solid var(--rojo-fuerte);
+  outline-offset: 2px;
+}
+
+/* --- SECCIONES Y TARJETAS --- */
+.vista {
+  display: none;
+  animation: aparecer 0.45s ease;
+}
+
+.vista--activa {
+  display: block;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tarjeta, .card {
+  background-color: rgba(20, 5, 10, 0.85);
+  border: 1px solid rgba(255, 77, 109, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border-radius: 28px;
+  padding: 2.2rem 1.8rem;
+  color: #ffffff;
+}
+
+.titulo-seccion {
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--rojo-fuerte);
+}
+
+.titulo-cursivo {
+  font-family: var(--fuente-cursiva);
+  font-size: 2.4rem;
+  color: var(--rojo-fuerte);
+  margin-bottom: 1rem;
+}
+
+.texto-grande {
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.tarjeta p {
+  color: #ffe0a3;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+
+.tarjeta p:last-child {
+  margin-bottom: 0;
+}
+
+.tarjeta strong {
+  color: var(--dorado);
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 200, 145, 0.4);
+}
+
+.tarjeta--inicio {
+  text-align: center;
+}
+
+/* --- IMAGEN SPIDEY --- */
+.spidey-gwen {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  animation: flotarSpidey 3s ease-in-out infinite;
+}
+
+@keyframes flotarSpidey {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.corazon-grande {
+  display: inline-block;
+  font-size: 2.6rem;
+  margin-bottom: 0.6rem;
+  animation: latido 1.6s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+
+/* --- MÚSICA --- */
+grilla-musica {
+  display: flex;
+  flex-direction: column; /* Alinea los reproductores uno debajo del otro */
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  max-width: 500px;        /* Mantiene un tamaño cómodo centrado */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tarjeta-artista {
+  width: 100%;
+}
+
+.video-envoltorio {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 77, 109, 0.3);
+}
+
+.video-envoltorio iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- GALERÍA --- */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.polaroid {
+  background: white;
+  padding: 0.7rem 0.7rem 1.1rem;
+  width: 190px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+  color: var(--vino);
+}
+
+.polaroid--izq { transform: rotate(-4deg); }
+.polaroid--der { transform: rotate(3deg); }
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+/* --- CARTA --- */
+.tarjeta--carta {
+  position: relative;
+}
+
+.sello-cera {
+  display: inline-block;
+  font-size: 2rem;
+  background: var(--dorado);
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.firma {
+  font-family: var(--fuente-cursiva);
+  font-size: 1.6rem;
+  color: var(--rojo-fuerte);
+  margin-top: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .tarjeta { padding: 1.6rem 1.2rem; }
+  .menu__boton { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
+  .polaroid { width: 42vw; }
+  .polaroid img { height: 42vw; }
+}
